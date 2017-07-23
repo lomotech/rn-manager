@@ -1,23 +1,23 @@
 // import
-import React from 'react';
-import {ActivityIndicator, View} from 'react-native';
+import React from "react"
+import { ActivityIndicator, View } from "react-native"
 
 // component
-export const Spinner = ({size}) => {
+export const Spinner = ({ size }) => {
 
-    return (
-        <View style={styles.spinnerStyle}>
-            <ActivityIndicator
-                size={size || 'large'}
-            />
-        </View>
-    )
-};
+  return (
+    <View style={styles.spinnerStyle}>
+      <ActivityIndicator
+        size={size || "large"}
+      />
+    </View>
+  )
+}
 
 const styles = {
-    spinnerStyle: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
-    }
+  spinnerStyle: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center"
+  }
 }
