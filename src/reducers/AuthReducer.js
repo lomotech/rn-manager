@@ -2,11 +2,14 @@ import { EMAIL_CHANGED, PASSWORD_CHANGED } from "../actions/types"
 
 const INITIAL_STATE = {
   email: "",
-  password: ""
+  password: "",
+  loading: false,
+  error: "",
+  user: null
 }
 
-export default ( state = INITIAL_STATE, action ) => {
-  switch ( action.type ) {
+export default (state = INITIAL_STATE, action) => {
+  switch (action.type) {
     case EMAIL_CHANGED:
       return { ...state, email: action.payload }
     case PASSWORD_CHANGED:
