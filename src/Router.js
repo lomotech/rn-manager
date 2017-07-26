@@ -5,11 +5,21 @@ import LoginForm from "./components/LoginForm"
 
 // component
 const RouterComponent = () => {
+
+  const getSceneStyle = (props, computedProps) => {
+    const style = {
+      backgroundColor: "blue"
+    }
+
+    return style
+  }
   return (
-    <Router>
-      <Scene key="root">
-        <Scene key="login" component={LoginForm} title="Please Login"/>
-      </Scene>
+    <Router sceneStyle={{ paddingTop: 65 }}>
+      <Scene
+        key="login"
+        component={LoginForm}
+        title="Please Login"
+      />
     </Router>
   )
 }
